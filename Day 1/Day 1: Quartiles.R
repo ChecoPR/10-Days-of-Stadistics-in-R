@@ -15,11 +15,11 @@ quartiles <- function(arr) {
     q2 <- median(arr)
     if(n %% 2 == 0) {
         rl <- n / 2
-        q1 <- median(arr[0:rl])
+        q1 <- median(arr[1:rl])
         q3 <- median(arr[(rl+1):n])
     }else{
-        rl <- round(n / 2)
-        q1 <- median(arr[0:rl])
+        rl <- floor(n / 2)
+        q1 <- median(arr[1:rl])
         q3 <- median(arr[(rl+2):n])
     }
     cat(arr)
